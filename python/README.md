@@ -6,7 +6,15 @@ For more information, see the Open API specification for the [Data Planning API]
 ## Getting started
 1. Install dependencies with pip: `pip install -r requirements.txt`
 2. Generate [Platform API credentials](https://docs.mparticle.com/developers/credential-management/)
-    - Enter the credentials in the `mp_config.json` file.
+3. Enter the credentials in the `mp_config.json` file.
+
+Example contents of `mp_config.json`:
+```json
+{
+    "platform_api_key": "YOUR API KEY",
+    "platform_api_secret": "YOUR API SECRET"
+}
+```
 
 ## Recipes
 The following recipes are demonstrated in this project:
@@ -66,3 +74,8 @@ Update version 2 in `Higgs Shop Basic Data Plan`.
 Delete version 2 in `Higgs Shop Basic Data Plan`.
 
 ```python recipes.py -ws=7505 version delete -plan_id=higgs_shop_basic_data_plan -plan_version=2```
+
+### Recipe 10: Validate batch
+Validate an event batch against the `Higgs Shop Basic Data Plan` data plan.
+
+```python recipes.py -ws=7505 validate```

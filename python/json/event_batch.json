@@ -1,0 +1,201 @@
+{
+    "source_request_id": "cd6f1475-7684-413b-8ad1-3096d89dc50e",
+    "mpid": "-8662059857093091527",
+    "timestamp_unixtime_ms": 1649261213734,
+    "environment": "development",
+    "events": [
+        {
+            "event_type": "application_state_transition",
+            "data": {
+                "application_transition_type": "application_initialized",
+                "is_first_run": false,
+                "is_upgrade": false,
+                "launch_referral": "http://localhost:3000/",
+                "timestamp_unixtime_ms": 1649261213588,
+                "session_uuid": "55B1423D-C28F-4645-B383-9B63F9D33253",
+                "session_start_unixtime_ms": 1649259500695,
+                "custom_attributes": null,
+                "location": null,
+                "source_message_id": "1b4fce93-a773-4e91-bf4d-1bb637888ca4"
+            }
+        },
+        {
+            "event_type": "screen_view",
+            "data": {
+                "custom_flags": {},
+                "screen_name": "Landing",
+                "timestamp_unixtime_ms": 1649261213589,
+                "session_uuid": "55B1423D-C28F-4645-B383-9B63F9D33253",
+                "session_start_unixtime_ms": 1649259500695,
+                "custom_attributes": {
+                    "hostname": "localhost",
+                    "title": "Higgs Shop Sample App"
+                },
+                "location": null,
+                "source_message_id": "1444b14f-7830-4497-a1eb-fff0156d60ae"
+            }
+        },
+        {
+            "event_type": "screen_view",
+            "data": {
+                "custom_flags": {},
+                "screen_name": "Landing",
+                "timestamp_unixtime_ms": 1649261213590,
+                "session_uuid": "55B1423D-C28F-4645-B383-9B63F9D33253",
+                "session_start_unixtime_ms": 1649259500695,
+                "custom_attributes": {
+                    "hostname": "localhost",
+                    "title": "Higgs Shop Sample App"
+                },
+                "location": null,
+                "source_message_id": "8ebd5704-ed01-4b38-8634-55ca4fad75c7"
+            }
+        },
+        {
+            "event_type": "commerce_event",
+            "data": {
+                "product_action": null,
+                "promotion_action": null,
+                "product_impressions": [
+                    {
+                        "product_impression_list": "Product List Impression",
+                        "products": [
+                            {
+                                "id": "128740",
+                                "name": "mP Icon Full Zip",
+                                "total_product_amount": 110,
+                                "price": 110,
+                                "quantity": 1,
+                                "custom_attributes": null
+                            },
+                            {
+                                "id": "128744",
+                                "name": "Unisex Fleece Pullover",
+                                "total_product_amount": 50,
+                                "price": 50,
+                                "quantity": 1,
+                                "custom_attributes": null
+                            },
+                            {
+                                "id": "128745",
+                                "name": "Unisex Full Logo Tee",
+                                "total_product_amount": 9,
+                                "price": 9,
+                                "quantity": 1,
+                                "custom_attributes": null
+                            },
+                            {
+                                "id": "128272",
+                                "name": "Women's Full Logo Tee",
+                                "total_product_amount": 9,
+                                "price": 9,
+                                "quantity": 1,
+                                "custom_attributes": null
+                            },
+                            {
+                                "id": "128747",
+                                "name": "Unisex Tee",
+                                "total_product_amount": 8,
+                                "price": 8,
+                                "quantity": 1,
+                                "custom_attributes": null
+                            },
+                            {
+                                "id": "128746",
+                                "name": "Unisex Pride Tee",
+                                "total_product_amount": 14,
+                                "price": 14,
+                                "quantity": 1,
+                                "custom_attributes": null
+                            },
+                            {
+                                "id": "128737",
+                                "name": "Absobu Dog Bowl",
+                                "total_product_amount": 28,
+                                "price": 28,
+                                "quantity": 1,
+                                "custom_attributes": null
+                            },
+                            {
+                                "id": "128738",
+                                "name": "Field & Co Sherpa Blanket",
+                                "total_product_amount": 41,
+                                "price": 41,
+                                "quantity": 1,
+                                "custom_attributes": null
+                            },
+                            {
+                                "id": "128741",
+                                "name": "Pride Decal",
+                                "total_product_amount": 3,
+                                "price": 3,
+                                "quantity": 1,
+                                "custom_attributes": null
+                            },
+                            {
+                                "id": "128113",
+                                "name": "Gamer Sticker",
+                                "total_product_amount": 1,
+                                "price": 1,
+                                "quantity": 1,
+                                "custom_attributes": null
+                            },
+                            {
+                                "id": "128115",
+                                "name": "Mug Sticker",
+                                "total_product_amount": 1,
+                                "price": 1,
+                                "quantity": 1,
+                                "custom_attributes": null
+                            },
+                            {
+                                "id": "128114",
+                                "name": "Glasses Sticker",
+                                "total_product_amount": 1,
+                                "price": 1,
+                                "quantity": 1,
+                                "custom_attributes": null
+                            },
+                            {
+                                "id": "128742",
+                                "name": "Pride Sticker",
+                                "total_product_amount": 2,
+                                "price": 2,
+                                "quantity": 1,
+                                "custom_attributes": null
+                            },
+                            {
+                                "id": "128743",
+                                "name": "Tennis Ball",
+                                "total_product_amount": 2,
+                                "price": 2,
+                                "quantity": 1,
+                                "custom_attributes": null
+                            }
+                        ]
+                    }
+                ],
+                "shopping_cart": null,
+                "currency_code": null,
+                "timestamp_unixtime_ms": 1649261213591,
+                "session_uuid": "55B1423D-C28F-4645-B383-9B63F9D33253",
+                "session_start_unixtime_ms": 1649259500695,
+                "custom_attributes": null,
+                "location": null,
+                "source_message_id": "3757c223-a18a-41b0-b563-2b8c30d8d0cd"
+            }
+        }
+    ],
+    "mp_deviceid": "4b416359-5064-470a-9f68-fe9595c3943b",
+    "sdk_version": "2.14.2",
+    "application_info": {},
+    "device_info": {
+        "platform": "web",
+        "screen_width": 1920,
+        "screen_height": 1080
+    },
+    "user_attributes": {},
+    "user_identities": null,
+    "consent_state": null,
+    "integration_attributes": {}
+}

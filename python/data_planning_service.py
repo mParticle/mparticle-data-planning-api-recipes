@@ -130,6 +130,25 @@ class DataPlanningService:
         if (response.status_code > 204):
             print(response.json())
         response.raise_for_status()
+
+    def validate_batch(self, workspace_id, data_plan_file, batch_file):
+        with open(data_plan_file) as f:
+            document = json.load(f)
+        with open(batch_file) as f:
+            batch = json.load(f)
+
+        payload = {
+            "document": document["version_document"],
+            "batch": batch
+        }
+
+        path = '/platform/v2/workspaces/%s/plans/validate' % (workspace_id)
+        url = self.platform_api_url + path
+        response = requests.post(url, headers=self.headers, json=payload)
+        if (response.status_code > 204):
+            print(response.json())
+        response.raise_for_status()
+        return response.json()
     
     def get_latest_plan_version(self, workspace_id, plan_id):
         path = '/platform/v2/workspaces/%d/plans/%s' % (workspace_id, plan_id)

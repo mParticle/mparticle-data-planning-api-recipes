@@ -67,25 +67,38 @@ def delete_plan_version(workspace_id, plan_id, plan_version):
     dps.delete_data_plan_version(workspace_id, plan_id, plan_version)
     print("Version deleted: %s" % plan_version)
 
+def validate_event_batch(workspace_id, dataplan_version_file, batch_file):
+    dps = DataPlanningService("mp_config.json")
+    results = dps.validate_batch(workspace_id, dataplan_version_file, batch_file)
+    print("Validation results: %s" % results)
+
 
 if __name__ == "__main__":
     parser = argparse.ArgumentParser()
     parser.add_argument("-ws", help="workspace id", type=int, required=True)
-    subparsers = parser.add_subparsers(help='plan help')
+    subparsers = parser.add_subparsers()
     
+    validate_parser = subparsers.add_parser('validate', help='validate event batch')
+    validate_parser.add_argument("-validate", help="validate event batch", type=str, required=False)
+    validate_parser.set_defaults(validate=True)
+
     plan_parser = subparsers.add_parser('plan', help='data plan actions')
     plan_parser.add_argument("-plan_id", help="data plan id", type=str, required=False)
     plan_parser.add_argument("command", help="list, create, get, update, delete", type=str)
 
-    verion_parser = subparsers.add_parser('version', help='data plan version actions')
-    verion_parser.add_argument("-plan_id", help="data plan id", type=str, required=True)
-    verion_parser.add_argument("-plan_version", help="data plan version", type=int, required=False)
-    verion_parser.add_argument("command", help="create, get, update, delete", type=str)
+    version_parser = subparsers.add_parser('version', help='data plan version actions')
+    version_parser.add_argument("-plan_id", help="data plan id", type=str, required=True)
+    version_parser.add_argument("-plan_version", help="data plan version", type=int, required=False)
+    version_parser.add_argument("command", help="create, get, update, delete", type=str)
     
     args = parser.parse_args()
     print(args)
 
-    if args.plan_id != None:
+    if args.validate != None:
+        dataplan_version_file = "json/create_higgs_shop_basic_data_plan_version2.json"
+        batch_file = "json/event_batch.json"
+        validate_event_batch(args.ws, dataplan_version_file, batch_file)
+    elif args.plan_id != None:
         if hasattr(args, "plan_version"):
             if args.command == "get":
                 file_name = "plan_%s_version%s.json" % (args.plan_id, args.plan_version)
