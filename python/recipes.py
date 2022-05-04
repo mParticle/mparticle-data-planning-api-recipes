@@ -94,7 +94,7 @@ if __name__ == "__main__":
     args = parser.parse_args()
     print(args)
 
-    if args.validate != None:
+    if hasattr(args, "validate"):
         dataplan_version_file = "json/create_higgs_shop_basic_data_plan_version2.json"
         batch_file = "json/event_batch.json"
         validate_event_batch(args.ws, dataplan_version_file, batch_file)
